@@ -29,4 +29,9 @@ export const config = [
   {
     ignores: ["dist/**"],
   },
+  {
+    rules: {
+      "quotes": ["error", "double", { "avoidEscape": true }],
+    },
+  },
 ];
