@@ -11,7 +11,6 @@ export class CreateUserDto {
   @IsString()
   password: string;
 
-
   constructor(name: string, email: string, password: string) {
     this.name = name;
     this.email = email;
