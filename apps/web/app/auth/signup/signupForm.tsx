@@ -7,7 +7,7 @@ import { signUp } from "@/lib/auth";
 import { useActionState } from "react";
 
 const signupForm = () => {
-  const [state, action] = useActionState(signUp, undefined)
+  const [state, action] = useActionState(signUp, undefined);
 
   return (
     <form action={action}>
@@ -22,7 +22,9 @@ const signupForm = () => {
             placeholder="Enter your name..."
           />
         </div>
-        {state?.error?.name && <p className="text-red-500">{state.error.name}</p>}
+        {state?.error?.name && (
+          <p className="text-red-500">{state.error.name}</p>
+        )}
 
         <div>
           <Label htmlFor="email">Email</Label>
@@ -33,7 +35,9 @@ const signupForm = () => {
             placeholder="Enter your email..."
           />
         </div>
-        {state?.error?.email && <p className="text-red-500">{state.error.email}</p>}
+        {state?.error?.email && (
+          <p className="text-red-500">{state.error.email}</p>
+        )}
 
         <div>
           <Label htmlFor="password">password</Label>
@@ -47,7 +51,9 @@ const signupForm = () => {
         {state?.error?.password && (
           <ul>
             {state.error.password.map((error) => (
-              <li key={error} className="text-red-500 text-sm">{error}</li>
+              <li key={error} className="text-red-500 text-sm">
+                {error}
+              </li>
             ))}
           </ul>
         )}

@@ -28,6 +28,8 @@ export const SignupFormSchema = z.object({
       message: "Password must contain at least one letter",
     })
     .regex(/[0-9]/, { message: "Must contain at least one number" })
-    .regex(/[^a-zA-Z0-9]/, { message: "Must contain at least one special character" })
+    .regex(/[^a-zA-Z0-9]/, {
+      message: "Must contain at least one special character",
+    })
     .trim(),
 });

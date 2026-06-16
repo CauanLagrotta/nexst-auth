@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: nexst-container
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: nexst-db
+    ports:
+      - "5432:5432"
+    volumes:
+      - nexst_data:/var/lib/postgresql
+
+volumes:
+ nexst_data:
